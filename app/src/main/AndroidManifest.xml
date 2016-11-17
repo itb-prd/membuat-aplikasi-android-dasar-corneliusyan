@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.asus.todolistbaru">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                // baris ini menandakan bahwa class MainActivity adalah class yang pertama dieksekusi saat aplikasi dijalankan
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        // class activity laiinya selain yang utama di atas, cukup seperti ini saja
+        // label itu judul yang akan muncul di Toolbar
+        <activity
+            android:name=".AddTodoActivity"
+            android:label="Tambah"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".EditTodoActivity"
+            android:label="Ubah"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>
